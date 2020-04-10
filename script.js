@@ -15,6 +15,7 @@ questo script prende da instagram le foto sotto il tag "quarantine"
 e le sovrappone casualmente con una opcaità del 50%
 <><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 //prende le immagin dal tag assegnati
+alert("This website temporarily shows the latest pictures posted on Instagram under the hashtag #quarantine \n \n for more info: otto@insiberia.it");
 $.get('https://www.instagram.com/explore/tags/quarantine/?__a=1')
   .then(datarest => {
     console.log(datarest)
