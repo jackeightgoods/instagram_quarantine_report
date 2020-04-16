@@ -14,8 +14,9 @@ scriva alla mia mail.
 questo script prende da instagram le foto sotto il tag "quarantine"
 e le sovrappone casualmente con una opcaità del 50%
 <><><><><><><><><><><><><><><><><><><><><><><><><><><> */
+//alert("This website temporarily shows the latest pictures posted on Instagram under the hashtag #quarantine \n \n for more info: otto@insiberia.it");
+
 //prende le immagin dal tag assegnati
-alert("This website temporarily shows the latest pictures posted on Instagram under the hashtag #quarantine \n \n for more info: otto@insiberia.it");
 $.get('https://www.instagram.com/explore/tags/quarantine/?__a=1')
   .then(datarest => {
     console.log(datarest)
@@ -24,7 +25,7 @@ $.get('https://www.instagram.com/explore/tags/quarantine/?__a=1')
 // finchp ci sono dati nella lista
     list.forEach(d => {
       // scrive sul file html la visualizzazione dll'immagine
-      $('body').append('<img width="100" src="' + d.node.display_url + '" />')
+    //  $('body').append('<img width="100" src="' + d.node.display_url + '" />')
       // scrive la posizione random delle immagini sul foglio di stile?
       var img = document.createElement('img');
       img.setAttribute("style", "position:absolute;");
@@ -37,6 +38,7 @@ $.get('https://www.instagram.com/explore/tags/quarantine/?__a=1')
 // da un effetto di animazion
     gsap.from('img', { scale: 0, rotation: 180, stagger: 0.5 })
   })
+
 // funzione che crea poszioni random
   function getRandomPosition(element) {
   	var x = document.body.offsetHeight-element.clientHeight;

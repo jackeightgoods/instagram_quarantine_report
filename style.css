@@ -9,3 +9,18 @@ img {
 h1 {
 color: rgb(0,255,0);
 }
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+div{
+
+  position: absolute;
+top: 1300px;
+}
+a {color: rgb(0,255,0);}
